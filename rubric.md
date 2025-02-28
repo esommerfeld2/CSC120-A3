@@ -38,7 +38,7 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 ## Kudos:
 
-_____ (Kudos!) Handles mirror words with punctuation
+______ (Kudos!) Handles mirror words with punctuation
 
 _____ (Kudos!) Generates output with correct punctuation & capitalization
 

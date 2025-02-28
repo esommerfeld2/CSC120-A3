@@ -47,7 +47,7 @@ class Conversation implements Chatbot {
     System.out.println("What would you like to talk about?");
 
     /* Creates loop that prints the converstaion*/
-    for(String s : transcript){
+    for(String s : transcript) {
       System.out.println(s);
     }
     System.out.println("Thanks for chatting!");
@@ -64,31 +64,32 @@ class Conversation implements Chatbot {
     String[] returnString = new String[words.length];
     int count = 0; 
     String theResponse;
+
     /* Creates a loop that looks at each word and sees if it matches a key word*/
     for (int i = 0; i <words.length; i++) {
-      if (words[i].equalsIgnoreCase("I")){;
+      if (words[i].equalsIgnoreCase("I")){
         returnString[i] = "you";
       }
-      else if(words[i].equalsIgnoreCase("me")){;
+      else if(words[i].equalsIgnoreCase("me")){
         returnString[i] = "you";
       }
-      else if(words[i].equalsIgnoreCase("am")){;
+      else if(words[i].equalsIgnoreCase("am")){
         returnString[i] = "are";
       }
-      else if(words[i].equalsIgnoreCase("you")){;
+      else if(words[i].equalsIgnoreCase("you")){
         returnString[i] = "I";
       } 
-      else if(words[i].equalsIgnoreCase("my")){;
+      else if(words[i].equalsIgnoreCase("my")){
         returnString[i] = "your";
       }
-      else if(words[i].equalsIgnoreCase("your")){;
+      else if(words[i].equalsIgnoreCase("your")){
         returnString[i] = "my";
-      }
-      else{
+      } else {
         returnString[i]= words[i];
         count += 1; /* Counts to see if none of the words match any of the key words above*/
       }
     }
+    
     /* If none of the key words above were mentioned returns a random response*/
     if(count == words.length){
       String[] randomResponse = {
@@ -107,11 +108,11 @@ class Conversation implements Chatbot {
     else {String result = String.join(" ", returnString);
     result = result + "?";
       return result;
-  }
+    }
   }
 
   public static void main(String[] arguments) {
-
+    
     Conversation myConversation = new Conversation();
     myConversation.chat();
     myConversation.printTranscript();
